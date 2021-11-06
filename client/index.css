@@ -1,0 +1,10 @@
+.img {
+    margin: auto;
+    height: 375px;
+    width: 250px;
+    margin:5px;
+    /* background-color: antiquewhite; */
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+}

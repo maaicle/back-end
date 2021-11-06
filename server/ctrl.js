@@ -1,9 +1,13 @@
+let idGen = 2;
+
 let vbObjects = [
     {
+        id: 0,
         type: 'goal',
         value: 'Be better'
     },
     {
+        id: 1,
         type: 'img',
         value: 'https://i.imgflip.com/v4lvq.jpg'
     }
@@ -40,12 +44,45 @@ module.exports = {
     },
 
     postVisionBoard: (req, res) => {
-        vbObjects.push(req.body)
+        let reqBody = req.body;
+        reqBody.id = idGen;
+        idGen++;
+        vbObjects.push(reqBody)
         console.log(vbObjects)
         res.status(200).send('Object Posted'); 
     },
 
     deletePost: (req, res) => {
-        res.status(200).send('Object Deleted')
-    }
-}
+        // console.log(req.params.id);
+        let idIndex = 0;
+        vbObjects.forEach((ele, index) => {
+            if(+req.params.id === ele.id) {
+                idIndex = index;
+            }
+        })
+        console.log(idIndex);
+        vbObjects.splice(idIndex, 1)
+        res.status(200).send(vbObjects)
+    },
+
+    editPost: (req, res) => {
+        let id = +req.query.id;
+        let type = '';
+        let {newVal} = req.body;
+        let idIndex = -1;
+        vbObjects.forEach((ele, index) => {
+            console.log(ele.id, id);
+            if(ele.id === id) {
+                idIndex = index;
+                type = ele.type;
+            }
+        })
+        let newBody = {
+            id: id,
+            type,
+            value: newVal
+        }
+        vbObjects.splice(idIndex, 1, newBody);
+        res.status(200).send(vbObjects);
+    }   
+} 

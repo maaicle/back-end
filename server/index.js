@@ -13,7 +13,8 @@ app.get("/api/compliment", ctrl.getCompliment);
 app.get("/api/fortune", ctrl.getFortune);
 app.get('/api/visionBoard', ctrl.getVisionBoard);
 app.post('/api/visionBoard', ctrl.postVisionBoard);
-app.delete('/api/post', ctrl.deletePost);
+app.delete('/api/post/:id', ctrl.deletePost);
+app.put('/api/post', ctrl.editPost);
 
 
 app.listen(4000, () => console.log("Server running on 4000"));
