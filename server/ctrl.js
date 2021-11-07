@@ -1,15 +1,25 @@
-let idGen = 2;
+let idGen = 4;
 
 let vbObjects = [
     {
         id: 0,
-        type: 'goal',
-        value: 'Be better'
+        type: 'img',
+        value: 'https://media.giphy.com/media/26ueZpF95CyH5sWY0/giphy-downsized.gif'
     },
     {
         id: 1,
         type: 'img',
+        value: 'https://graphicdesignjunction.com/wp-content/uploads/2012/08/landscape-replection-photography-12.jpg'
+    },
+    {
+        id: 2,
+        type: 'img',
         value: 'https://i.imgflip.com/v4lvq.jpg'
+    },
+    {
+        id: 3,
+        type: 'goal',
+        value: 'Improve my javascript skills'
     }
 ];
 
@@ -48,19 +58,16 @@ module.exports = {
         reqBody.id = idGen;
         idGen++;
         vbObjects.push(reqBody)
-        console.log(vbObjects)
         res.status(200).send('Object Posted'); 
     },
 
     deletePost: (req, res) => {
-        // console.log(req.params.id);
         let idIndex = 0;
         vbObjects.forEach((ele, index) => {
             if(+req.params.id === ele.id) {
                 idIndex = index;
             }
         })
-        console.log(idIndex);
         vbObjects.splice(idIndex, 1)
         res.status(200).send('Post Deleted')
     },

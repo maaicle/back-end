@@ -3,14 +3,18 @@
   <head>
     <title>Back End Assessment</title>
     <link rel="stylesheet" href="./index.css">
+    <link rel="stylesheet" href="./tutorial.css">
   </head>
-  <body class="container">
+  <body class="container">  
+    <div class="help-cont"></div>  
     <header>
+      <!-- The home button -->
       <button class="home"></button>
-      <form>
+      <!-- The post form -->
+      <form class="post-form">
         <input 
         type='text' 
-        placeholder="Add goal"
+        placeholder="Add goal or image (URL)"
         class='goalInpt'
         >
         <select = name="dropdown">
@@ -19,16 +23,17 @@
         </select>
         <button class='postBtn'>Post</button>
       </form>
-      
+      <!-- The get compliment and get fortune buttons -->
       <div class="headBtns">
         <button id="complimentButton">Get a compliment</button>
         <button class="fortuneBtn">Get your fortune</button>
       </div>
 
     </header>
-
-    <section class='vision-board'></section>    
-    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
-    <script src="./main.js"></script>
+    <div class="overlay-cont"></div>
   </body>
+  <section class='vision-board'></section>    
+  <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+  <script src="./main.js"></script>
+  <script src="./tutorial.js"></script>
 </html>

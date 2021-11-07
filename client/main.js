@@ -1,11 +1,6 @@
 //HTML elements as js variables
 let fortuneBtn = document.querySelector('.fortuneBtn');
 let visionBoard = document.querySelector('.vision-board');
-let postBtn = document.querySelector('.postBtn');
-let picBtn = document.querySelector('.picBtn');
-let goalInpt = document.querySelector('.goalInpt');
-let picURL = document.querySelector('.picURL');
-let firstGoal = document.querySelector('h2');
 let form = document.querySelector('form');
 
 //Other js variables
@@ -39,7 +34,7 @@ let getVisionBoard = () => {
                 newDiv.innerHTML =
                     `<h2>${ele.value}</h2>` +
                     `<div>` +
-                    `<button class='delete postBtn' id=${ele.id}></button>` +
+                    `<button class='delete' id=${ele.id}></button>` +
                     `<button class='edit goal-post' id=${ele.id}></button>` +
                     '</div>';
             } else if (ele.type === 'img') {
@@ -49,7 +44,7 @@ let getVisionBoard = () => {
                 visionBoard.appendChild(newDiv);
                 newDiv.innerHTML = 
                     `<img src=${ele.value}>` +
-                    `<div>` +
+                    `<div class='button-box'>` +
                     `<button class='delete' id=${ele.id}></button>` +
                     `<button class='edit img-post' id=${ele.id}></button>` +
                     '</div>';
@@ -95,6 +90,7 @@ let createPost = event => {
     tar.querySelector('input').value = '';
 }
 
+//Delete post
 let deletePost = event => {
     event.preventDefault();
     axios.delete(`${baseURL}/post/${event.target.id}`)
@@ -165,7 +161,6 @@ fortuneBtn.addEventListener('click', getFortune);
 form.addEventListener('submit', createPost);
 //Listens anytime anything is clicked in the document. newTargets function deciphers the target.
 document.addEventListener('click', newTargets);
-
 
 getVisionBoard();
 

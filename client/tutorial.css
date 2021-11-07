@@ -1,0 +1,47 @@
+.help-cont {
+    position: absolute;
+    top: 115px;
+    left: 20px;
+    width: 600px;
+    z-index: 102;
+
+}
+
+.help-card {
+    background-color:#EF626C;
+    color: white;
+    border-radius: 5px;
+    padding: 5px;
+    margin-top: 0px 5px 0px;
+}
+
+.help-text {
+    margin: 2px 0px;
+}
+
+.help-btn {
+    width: 20px;
+    height: 20px;
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+    margin: 5px 2px 0px;
+}
+
+.help-exit {
+    background-image: url(../pics/delete.png);
+}
+
+.help-next {
+    background-image: url(../pics/next.png);
+}
+
+.overlay {
+    position:fixed;
+    z-index: 100;
+    top:0; 
+    left:0;
+    bottom:0; 
+    right:0;
+    background-color:rgba(0,0,0,0.8);   
+}

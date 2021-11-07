@@ -4,14 +4,11 @@ body {
 }
 
 header {
-    /* position: fixed; */
     display: flex;
     justify-content: space-between;
     align-items: center;
-    /* border: solid; */
     border-bottom: solid;
     border-color: #312F2F;
-    /* background-color: #F6E8EA;  */
     height: 90px;
     padding: 10px;
     margin-bottom:10px;
@@ -28,8 +25,6 @@ button {
     color: #22181C;
     margin: 10px;
     padding: 4px;
-    /* box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px; */
-    /* border: solid; */
 }
 
 button:hover {
@@ -63,8 +58,14 @@ h2 {
     margin: 5px;
 }
 
+h3 {
+    margin: 0;
+    top: 500px;
+    color: #EF626C;
+}
+
 .home {
-    background-image: url(../home-button2.png);
+    background-image: url(../pics/home-button2.png);
     background-repeat: no-repeat;
     background-size: contain;
     background-position: center;
@@ -84,7 +85,6 @@ h2 {
     height: 375px;
     width: 250px;
     margin:5px;
-    /* background-color: antiquewhite; */
     background-repeat: no-repeat;
     background-size: contain;
     background-position: center;
@@ -102,28 +102,31 @@ h2 {
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;
-    /* align-items: flex-start; */
-    /* flex-wrap: wrap; */
     align-content: flex-start;
     background-color: #F6E8EA;
     width: 600px;
     margin-top: 10px;
     border-radius: 5px;
-    max-height: 800px;
     box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
 }
 
+.button-box {
+    position: relative;
+}
+
 .delete {
+    position: relative;
     width: 40px;
     height: 40px;
-    background-image: url(../delete.png);
+    background-image: url(../pics/delete.png);
     background-repeat: no-repeat;
     background-size: contain;
     background-position: center;
 }
 
 .edit {
-    background-image: url(../edit.png);
+    position: relative;
+    background-image: url(../pics/edit.png);
     width: 40px;
     height: 40px;
     background-repeat: no-repeat;
@@ -131,3 +134,6 @@ h2 {
     background-position: center;
 }
 
+.postBtn {
+    margin: 0px;
+}
