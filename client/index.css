@@ -1,3 +1,84 @@
+body {
+    margin: 0;
+    font-family: 'montserrat';
+}
+
+header {
+    /* position: fixed; */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    /* border: solid; */
+    border-bottom: solid;
+    border-color: #312F2F;
+    /* background-color: #F6E8EA;  */
+    height: 90px;
+    padding: 10px;
+    margin-bottom:10px;
+    min-width: 900px;
+}
+
+button {
+    background-color: #84DCCF;
+    border: none;
+    border-radius: 5px;
+    font-size: 24px;
+    font-family: 'montserrat';
+    font-weight: bold;
+    color: #22181C;
+    margin: 10px;
+    padding: 4px;
+    /* box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px; */
+    /* border: solid; */
+}
+
+button:hover {
+    background-color: #EF626C;
+}
+
+input {
+    font-size: 24px;
+    font-family: 'montserrat';
+    border-radius: 5px;
+    border-style: solid;
+    border-width: 1px;
+}
+
+select {
+    background-color: #84DCCF;
+    border: none;
+    border-radius: 5px;
+    font-size: 24px;
+    font-family: 'montserrat';
+}
+
+img {
+    width: calc(100% - 10px);
+    height: auto;
+    border-radius: 5px;
+    margin: 5px;
+}
+
+h2 {
+    margin: 5px;
+}
+
+.home {
+    background-image: url(../home-button2.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+    height: 75px;
+    width: 80px;
+    padding: 5px;
+    
+}
+
+.headBtns {
+    display: flex;
+    flex-direction: column;
+}
+
 .img {
     margin: auto;
     height: 375px;
@@ -8,3 +89,45 @@
     background-size: contain;
     background-position: center;
 }
+
+.vision-board {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-width: 900px;
+    
+}
+
+.post-div {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    /* align-items: flex-start; */
+    /* flex-wrap: wrap; */
+    align-content: flex-start;
+    background-color: #F6E8EA;
+    width: 600px;
+    margin-top: 10px;
+    border-radius: 5px;
+    max-height: 800px;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+
+.delete {
+    width: 40px;
+    height: 40px;
+    background-image: url(../delete.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+}
+
+.edit {
+    background-image: url(../edit.png);
+    width: 40px;
+    height: 40px;
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+}
+

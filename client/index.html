@@ -5,21 +5,27 @@
     <link rel="stylesheet" href="./index.css">
   </head>
   <body class="container">
-    <button id="complimentButton">Get a compliment</button>
-    <button class="fortuneBtn">Get your fortune</button>
-    
-    <!-- <form> -->
-      <input 
+    <header>
+      <button class="home"></button>
+      <form>
+        <input 
         type='text' 
         placeholder="Add goal"
-        class='goalInpt'>
-      <button class='goalBtn'>Submit</button>
-      <input 
-        type='text'
-        placeholder="Add insperational pic (URL)"
-        class='picURL'>
-      <button class='picBtn'>Submit</button>
-    <!-- </form> -->
+        class='goalInpt'
+        >
+        <select = name="dropdown">
+          <option value = "goal" selected>Goal</option>
+          <option value = "img">Image</option>
+        </select>
+        <button class='postBtn'>Post</button>
+      </form>
+      
+      <div class="headBtns">
+        <button id="complimentButton">Get a compliment</button>
+        <button class="fortuneBtn">Get your fortune</button>
+      </div>
+
+    </header>
 
     <section class='vision-board'></section>    
     <script src="https://unpkg.com/axios/dist/axios.min.js"></script>

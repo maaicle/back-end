@@ -40,7 +40,7 @@ module.exports = {
     },
     
     getVisionBoard: (req, res) => {
-    res.status(200).send(vbObjects);
+    res.status(200).send(vbObjects.sort((a, b) => b.id - a.id));
     },
 
     postVisionBoard: (req, res) => {
@@ -62,7 +62,7 @@ module.exports = {
         })
         console.log(idIndex);
         vbObjects.splice(idIndex, 1)
-        res.status(200).send(vbObjects)
+        res.status(200).send('Post Deleted')
     },
 
     editPost: (req, res) => {
@@ -71,7 +71,6 @@ module.exports = {
         let {newVal} = req.body;
         let idIndex = -1;
         vbObjects.forEach((ele, index) => {
-            console.log(ele.id, id);
             if(ele.id === id) {
                 idIndex = index;
                 type = ele.type;
@@ -83,6 +82,6 @@ module.exports = {
             value: newVal
         }
         vbObjects.splice(idIndex, 1, newBody);
-        res.status(200).send(vbObjects);
+        res.status(200).send('Post Updated');
     }   
 } 
